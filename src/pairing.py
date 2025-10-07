@@ -4,6 +4,7 @@
 import random
 import logging
 import datetime
+import json
 from typing import List, Tuple, Dict, Optional, Set
 
 
@@ -30,8 +31,10 @@ def parse_previous_pairs_from_metadata(messages: List[Dict]) -> Optional[PairHis
     for message in messages:
         metadata = message.get('metadata')
         if not metadata:
+            logging.info(f"No metadata in message: {json.dumps(message)}")
             continue
 
+        logging.info(f"Reading metadata: {json.dumps(metadata)}")
         # Check if this is a random coffee pairs message
         if metadata.get('event_type') != 'random_coffee_pairs':
             continue
