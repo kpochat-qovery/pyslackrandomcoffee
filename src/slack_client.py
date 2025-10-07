@@ -192,7 +192,8 @@ class SlackClient:
                 'channel': channel_id,
                 'limit': 200,
                 'oldest': oldest_timestamp,
-                'newest': newest_timestamp
+                'newest': newest_timestamp,
+                'include_all_metadata': True
             }
 
             conversation_history = []
