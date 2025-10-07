@@ -3,8 +3,8 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.9.2
+  - python=3.11
   - pip
   - pip:
-      - slack_sdk==3.4.2 # Send messages to slack channels and users
-      - python-dotenv==1.0.0
+      - slack_sdk==3.36.0 # Send messages to slack channels and users
+      - python-dotenv==1.1.1

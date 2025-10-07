@@ -1,0 +1,35 @@
+_metadata:
+  major_version: 2
+display_information:
+  name: Random Coffee Bot
+  description: Randomly pairs channel members for coffee chats
+  long_description: |-
+    A bot that randomly matches members of a Slack channel for coffee dates.
+
+    The bot automatically:
+    - Pairs all members in a channel randomly
+    - Avoids repeating recent matches by looking back at history
+    - Sends group DMs to each pair
+    - Handles odd number of members by pairing one person twice
+
+    Perfect for building connections in remote teams, new hire onboarding,
+    or fostering cross-team collaboration.
+  background_color: "#6F4E37"
+features:
+  bot_user:
+    display_name: Random Coffee Bot
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - channels:read
+      - chat:write
+      - groups:history
+      - groups:read
+      - mpim:write
+      - users:read
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
